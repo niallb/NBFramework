@@ -1,0 +1,426 @@
+body {
+    background-color: #530080;
+}
+
+/*
+Complimentary colours are #4E9410 #941510 #561094
+(From https://www.hexcolortool.com/)
+*/
+
+#outerContainer {
+    margin: 0;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+#pageHeader {
+    position: fixed;
+    top: 8px;
+    height: 72px;
+    width: 220px;
+    overflow: auto;
+    background: url(logo.png) no-repeat top left;
+    z-index: 10;
+}
+
+#pageHeader a{
+    width:290px;
+    height: 72px;
+    display:block;
+    margin: 0;
+    padding: 0;
+	color: transparent;
+	z-index: 5;
+}
+
+#innerContainerFrame {
+    position: absolute;
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+#innerContainer {
+    display: table-row;
+    height: 100%;
+}
+
+#leftOuter {
+    position: relative;
+    left: 0;
+    height: 100%;
+    display: table-cell;
+	width: 220px;
+}
+
+#leftOuterContainer {
+    position: relative;
+    left: 0;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+#loginBox {
+    border: 2px solid #4682B4;
+    width: 80%;
+    margin-left:8%;
+    background-color: #DCDCDC;
+    text-align: center;
+    padding: 3px;
+}
+
+#leftContainer {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    top: 60px;
+    bottom: 0px;
+}
+
+#leftFull {
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    margin: 0;
+    bottom: 8px;
+	padding: 5px;
+    top: 0px;
+	color: white;
+    background-color: #120080;
+    border: 2px solid #006D80 ;
+    overflow: auto;
+}
+
+#leftFull a{
+   	color: #8fc7f5;
+}
+
+#mainOuterContainer {
+    position: relative;
+    display: table-cell;
+    padding: 0;
+}
+
+#mainContainer {
+    position: relative;
+    top: 0px;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#mainInnerContainer {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 8px; 
+}
+
+#mainContainerFrame {
+    display: table;
+    position: relative;
+    width:100%;
+    height: 100%;
+}
+
+#mainAreaFrame{
+    display: table-row;
+}
+
+#mainAreaContainer {
+    position: relative;
+    display: table-cell;
+    background-color: #fff;
+    height: 100%;
+}
+
+#mainArea {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#rightOuter {
+    position: relative;
+    height: 100%;
+    display: table-cell;
+    right: 4px;
+    width: 35%;
+}
+
+#rightOuterContainer {
+    position: relative;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width: 100%;
+}
+
+#rightContainer {
+    position: absolute;
+    right: 4px;
+    left: 4px;
+    
+    top: 4px;
+    height:100%;
+    bottom:4px;
+}
+
+#rightFull {
+    position: absolute;
+    background-color: #fff;
+    left: 4px;
+    right: 4px;
+    margin: 0;
+    top: 0px;
+    bottom: 8px;
+    border: 2px solid #003377;
+    overflow: auto;
+}
+
+/******************** Stuff specific to this app, which probably should be in a different file ******************/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+#container, #backdrop, #slidesdef {
+    left: 0;
+  width: 98%;
+  height: 95vh;
+}
+
+#highlights, #slidesdef {
+  padding: 10px;
+  font: 14px/20px 'Open Sans', sans-serif;
+  letter-spacing: 1px;
+}
+
+#container {
+  display: block;
+  margin: 0 auto;
+  transform: translateZ(0);
+}
+
+#backdrop {
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  overflow: auto;
+  pointer-events: none;
+  transition: transform 1s;
+}
+
+#highlights {
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	color: transparent;
+}
+
+#slidesdef {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  border: 2px solid #74637f;
+  border-radius: 0;
+  color: #222;
+  background-color: transparent;
+  overflow: auto;
+  resize: none;
+  transition: transform 1s;
+}
+
+iframe {
+    overflow: hidden;
+}
+
+.ajaxLink
+{
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+mark {
+  border-radius: 3px;
+  color: transparent;
+}
+
+.m1{
+  background-color: #ff0000;
+}
+
+.formsurround {
+display:none;
+position: fixed;
+    z-index: 100;
+}
+
+.hiddenFill {
+    width: 100%;
+    height: 100%;
+    opacity: .55;
+    top: 0;
+    left: 0;
+    //display: none;
+    position: fixed;
+    background-color: #313131;
+    overflow: auto;
+    z-index: 200;
+}
+
+.popup {
+    position: fixed;
+    background-color: #fff;
+    width: 600px;
+    opacity: 1;
+    left: 50%;
+    top: 10%;
+    margin-left: -300px;
+    z-index: 201;
+}
+
+#editor {
+    //font-size: initial;
+    margin: 0;
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+    border: 2px solid #003377;
+}
+
+.todohd{
+	font-family : sans-serif;
+	margin : 0;
+	padding : 0mm;
+    font-size : 11pt;
+    color: #999;
+}
+
+.todohd1{
+	font-family : sans-serif;
+	margin : 0;
+	padding : 0mm;
+    font-size : 14pt;
+    color: #666;
+
+}
+
+form{
+    max-width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.8);
+    padding: 15px;
+    background-color: #fff;
+}
+ 
+  
+.formfield{
+    max-width: 1000px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+ 
+input{
+    max-width: 1000px;
+}
+ 
+.errormsg
+{
+	color: red;
+}
+ 
+fieldset
+{
+	display: block;
+	width: 94%;
+	margin: 0 0 3em 0;
+	padding: 0 1em 1em 1em;
+}
+ 
+legend
+{
+		font: 80% Arial, Helvetica, sans-serif;
+}
+ 
+label
+{
+	display: block;
+	vertical-align: middle;
+	width : 90%;
+	font: 100% Arial, Helvetica, sans-serif;
+}
+ 
+input[type=text] {
+  padding:5px;
+  border: 1px solid #aaa;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+ 
+textarea {
+  padding:5px;
+  border: 1px solid #aaa;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+ 
+/* based on form-style-3 at https://www.sanwebe.com/2014/08/css-html-forms-designs */
+ 
+fieldset{
+	border-radius: 5px;
+	margin: 0px 0px 10px 0px;
+	border: 1px solid #88dd88;
+	padding: 20px;
+	background: #ccffee;
+	box-shadow: inset 0px 0px 15px #ccffcc;
+}
+fieldset legend{
+	color: #55aa77;
+	border-top: 1px solid #88dd88;
+	border-left: 1px solid #88dd88;
+	border-right: 1px solid #88dd88;
+	border-radius: 5px 5px 0px 0px;
+	background: #ccffee;
+	padding: 0px 8px 3px 8px;
+	box-shadow: -0px -1px 2px #F1F1F1;
+	font-weight: normal;
+	font-size: 12px;
+}
+ 
+input, select, textarea{
+	border-radius: 3px;
+	padding: 5px 8px 5px 8px;
+	background: #EFFFF6;
+}
+ 
+input[type=file]{
+    border: 1px solid #88aa88;
+    width: 100%;
+}
+ 
+input[type=submit]{
+    min-width: 30%;
+    background: #ccc;
+}
+ 
+.required_indicator{
+    color: red;
+}
+
+@media print{
+	#leftOuter {
+		width: 5px;
+		display: none;
+	}
+	#rightFloat {
+		width: 5px;
+		display: none;
+	}
+}
