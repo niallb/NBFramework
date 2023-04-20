@@ -139,41 +139,6 @@ class ltiSession
         return $computed_signature;
     }
 
-    /* Old Moodle 1.9 prototype version. Needs replaced with LTI Advantage equivalents.
-    function retrieveRosterAvailable()
-    {
-    	if((isset($this->params['ext_ims_lis_memberships_url']))&&(isset($this->params['ext_ims_lis_memberships_id'])))
-        	return true;
-        else
-        	return false;
-    }
-
-    function retriveRoster($secretManager)
-    {
-		$message = 'basic-lis-readmembershipsforcontext';
-		$url = $this->params['ext_ims_lis_memberships_url'];
-		$id = $this->params['ext_ims_lis_memberships_id'];
-
-		$data = array(
-          'oauth_version' => '1.0',
-          'oauth_nonce' => md5(time().$this->params['user_id']),
-          'oauth_timestamp' => time(),
-          'lti_version' => 'LTI-1p0',
-          'oauth_callback' => 'about:blank',
-          'oauth_signature_method' => 'HMAC-SHA1',
-		  'lti_message_type' => $message,
-		  'id' => $id,
-          'oauth_consumer_key' => $this->params["oauth_consumer_key"],
-        );
-
-    	$data['oauth_signature'] = ltiSession::getOAuthSignature($data, $url, "POST", $secretManager->getSecret($this->params["oauth_consumer_key"]));
-		$retval = do_post_request($url, http_build_query($data));
-        $response = new cls_message_response($retval);
-        if($response->m_memberships)
-            return $response->m_memberships->m_member;  // an array of cls_member
-    }
-    */
-
     function gradeMethodsAvailable()
     {
     	if((isset($this->params['lis_outcome_service_url']))&&(isset($this->params['lis_result_sourcedid'])))
